@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    height:100vh;  
+/*    100% of the viewport height*/
+    padding:10px;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 2em;
+    margin:20px 0px;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: red;
+    padding:5px;
+}
+
+a {
+    font-family: sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px;
+    display: inline-block;
+    
+/*    animation properties*/
+    transition: 1s;
+}
+
+
+a:hover {
+    background: black;
+    color: white;
+}
