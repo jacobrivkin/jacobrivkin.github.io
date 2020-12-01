@@ -54,8 +54,13 @@ ul.nav {
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
-    background: black;
+/*    background: black;*/
     padding: 10px 0;
+}
+
+ul.nav.back{
+        background: black;
+
 }
 
 nav#nobg{
