@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'work';
-    src: url("assets/type/Work_Sans/WorkSans-VariableFont_wght.ttf") format( 'truetype'),
+    src: url("assets/type/Work_Sans/WorkSans-VariableFont_wght.ttf") format('truetype'),
 }
 
 html {
@@ -19,211 +19,85 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: white;
     font-family: 'work', Fallback, sans-serif;
     padding: 20px;
     /*    height: 100vh;*/
 }
 
-h1 {
+.title {
     font-family: Arial;
     font-size: 2.5em;
-    color: white;
-}
-.current-page{
-    color: tomato;
-}
-
-/*CANVAS*/
-
-canvas{
-    position: fixed;
-    top:0;
-    left:0;
-    z-index: -1;
-    opacity: 0.5;
+    color: black;
+    margin-bottom: 15px;
+    display: block;
+    width:700px;
 }
 
-/*NAVIGATION*/
+div{
+    margin:0px;
+    padding:0px;
+    display: block;
+}
 
-ul.nav {
+p {
+    font-family: Arial;
+    font-size: 1.5em;
+    width:700px;
+}
+
+a.inner {
+    font-size: 1em;
+    color:blue;
+    transition:color .25s ease;
+}
+
+.section {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0px;
-/*    background: black;*/
-    padding: 10px 0;
-}
-
-ul.nav.back{
-        background: black;
-
-}
-
-nav#nobg{
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
     
 }
-
-ul {
-    list-style-type: none;
+.it{
+    font-style: italic;
+    color:grey;
 }
-
-li {
-    margin-right: 30px;
-    font-size: 2em;
-    text-transform: uppercase;
-     border-bottom: white solid 1px;
-}
-
-.nav .current-page a {
-    color: tomato;
-}
-
-.top {
+.nav-about {
     position: fixed;
-    font-size: 1.75em;
-    right: 20px;
-    bottom: 20px;
-    padding: 10px 15px;
-    border-radius: 50%;
-    border: solid white 1px;
-    opacity: .5;
+    top: 30px;
+    right: 30px;
+}
+.nav-backtotop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
 }
 
-.top a {
-    color: white;
+.nav-poem{
+    position: fixed;
+    top: 30px;
+    right: 30px;
 }
 
-.top:hover {
-    opacity: 1;
-}
-
-
-/*Landing Page*/
-
-.main-description {
-    color: white;
-    font-size: 2em;
-    margin-bottom: 30px;
-    line-height: 1.4em;
-}
-
-
-/*BIO*/
-
-.bio-description {
-    color: white;
-    font-size: 1.5em;
-    margin: 20px 0px;
-    line-height: 1.3em;
-
-}
-
-
-/*CV*/
-
-.cv p {
-    color: white;
-    font-size: 1.25em;
-    margin: 5px 0px;
-}
-
-.cv h2 {
-    color: white;
-    padding: 10px 0;
-}
-
-.cv .current-class {
-    color: tomato;
-}
-
-
-/*Statement*/
-
-.statement p {
-    color: white;
-    font-size: 1.5em;
-    margin: 19px 0px;
-    line-height: 1.3em;
-
-}
-
-.statement h2 {
-    color: white;
-    padding: 0px 0;
-}
-
-
-/*Teaching*/
-
-.teaching p {
-    color: white;
-    font-size: 1em;
-    margin: 5px 0px;
-}
-
-.teaching h2 {
-    color: tomato;
-    font-size: 1.5em;
-    padding: 5px 0;
-}
-
-.teaching h3 {
-    color: white;
-    font-size: 1.25em;
-    padding: 5px 0;
-}
-
-.teaching h4 {
-    color: white;
-    font-size: 1em;
-    margin-top: 20px;
-    padding: 0px 0;
-}
-
-.current-class {
-    border: tomato 4px double;
-    padding: 10px
-}
-
-.completed-class {
-    margin-top: 20px
-}
-
-#complete-toggle{
-    color:tomato;
-    cursor:grab;
-}
-
-#complete-toggle:hover{
-    color:yellow;
-}
-
-#completed{
-    display:none;
-}
 
 /*LINKS*/
 
 a {
     text-decoration: none;
-    color: white;
-    /*    transition: color .5s ease;*/
+    color: black;
+    transition: all .5s ease;
     cursor: grab;
+    transform: rotate(90deg);
+    font-size:1.5em;
 }
 
-p a {
-    text-decoration: none;
-    color: yellow;
-    transition: color .5s ease;
-    cursor: grab;
-}
 
 a:hover {
-    color: yellow;
+    color: hotpink;
+    transform: rotate(45deg);
 }
 
 
@@ -233,57 +107,7 @@ a:hover {
 /*RESIZE*/
 
 @media only screen and (max-width: 600px) {
-    /*    Main*/
-    body {
-        padding: 20px;
-    }
-    h1 {
-        font-size: 2.5em;
-    }
-    /*    NAV*/
-    ul.nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        position: relative;
-    }
-    ul {
-        /*   to get rid of the bullets in the list */
-        list-style-type: none;
-    }
-    li {
-        /*    To have them go next to each other*/
-        /*    to give space around them*/
-        margin-right: 10px;
-        margin-bottom: 5px;
-        font-size: 2.5em;
-        text-transform: uppercase;
-        border-bottom: white solid 1px;
-    }
-    .top {
-        position: fixed;
-        font-size: 1.5em;
-        right: 20px;
-        bottom: 20px;
-        padding: 5px 10px;
-        border-radius: 100%;
-        border: solid white 1px;
-        opacity: .5;
-    }
-    
-    /*    PAGES*/
-    .main-description {
-        display: none;
-    }
-    .bio-description {
-        color: white;
-        font-size: 1.35em;
-        margin: 20px 0px;
-    }
-    .cv p {
-        color: white;
-        font-size: 1em;
-        margin: 5px 0px;
-    }
+
+
+
 }
