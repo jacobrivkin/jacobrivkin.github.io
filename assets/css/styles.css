@@ -124,7 +124,7 @@ a:hover {
         width: 100vw;
         /* overflow-x: hidden; */
     }
-    
+
     .section {
         display: flex;
         flex-direction: column;
@@ -152,6 +152,7 @@ a:hover {
         width: 325px;
         font-size: 14px;
     }
+
     a.inner {
         color: blue;
         transition: color .25s ease;
@@ -168,7 +169,7 @@ a:hover {
 
     }
 
-    
+
 
     .nav-about {
         position: fixed;
