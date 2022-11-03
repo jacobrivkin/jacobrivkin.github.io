@@ -22,6 +22,10 @@ body {
     background-color: white;
     font-family: 'work', Fallback, sans-serif;
     padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+    overflow: auto;
+    /* Hide scrollbars */
     /*    height: 100vh;*/
 }
 
@@ -31,25 +35,25 @@ body {
     color: black;
     margin-bottom: 15px;
     display: block;
-    width:700px;
+    width: 700px;
 }
 
-div{
-    margin:0px;
-    padding:0px;
+div {
+    margin: 0px;
+    padding: 0px;
     display: block;
 }
 
 p {
     font-family: Arial;
     font-size: 1.5em;
-    width:700px;
+    width: 700px;
 }
 
 a.inner {
     font-size: 1em;
-    color:blue;
-    transition:color .25s ease;
+    color: blue;
+    transition: color .25s ease;
 }
 
 .section {
@@ -59,27 +63,35 @@ a.inner {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    
-}
-.it{
-    font-style: italic;
-    color:grey;
-}
-.nav-about {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-}
-.nav-backtotop {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
+    max-width: 100%;
+
+
 }
 
-.nav-poem{
+.it {
+    font-style: italic;
+    color: grey;
+}
+
+.nav-about {
     position: fixed;
-    top: 30px;
-    right: 30px;
+    margin: 30px;
+    top: 0px;
+    right: 0px;
+}
+
+.nav-backtotop {
+    position: fixed;
+    margin: 30px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.nav-poem {
+    position: fixed;
+    margin: 30px;
+    top: 0px;
+    right: 0px;
 }
 
 
@@ -90,24 +102,168 @@ a {
     color: black;
     transition: all .5s ease;
     cursor: grab;
-    transform: rotate(90deg);
-    font-size:1.5em;
+    /* transform: rotate(90deg); */
+    font-size: 1.5em;
 }
 
 
 a:hover {
     color: hotpink;
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
 }
-
-
-/*IMAGES*/
-
 
 /*RESIZE*/
 
+/* VERTICAL */
 @media only screen and (max-width: 600px) {
+    body {
+        background-color: white;
+        font-family: 'work', Fallback, sans-serif;
+        overflow: auto;
+        padding: 20px;
+        width: 100vw;
+        /* overflow-x: hidden; */
+    }
+    
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        /* justify-content: left; */
+        /* width: 100vw; */
+        height: 100vh;
+        margin: 0px;
+        /* width:100vw; */
+        max-width: 100%;
+
+    }
+
+    .title {
+        font-family: Arial;
+        font-size: 1.5em;
+        color: black;
+        margin-bottom: 15px;
+        display: block;
+        width: 325px;
+    }
+
+    p {
+        font-family: Arial;
+        width: 325px;
+        font-size: 14px;
+    }
+    a.inner {
+        color: blue;
+        transition: color .25s ease;
+        font-size: 14px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        transition: all .5s ease;
+        cursor: grab;
+        transform: rotate(90deg);
+        font-size: 14px;
+
+    }
+
+    
+
+    .nav-about {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        margin: 20px;
+    }
+
+    .nav-backtotop {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        margin: 20px;
+
+    }
+
+    .nav-poem {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        margin: 20px;
+    }
 
 
+
+}
+
+/* HORIZONTAL */
+
+@media only screen and (min-width:600px) and (max-width:900px) {
+    body {
+        background-color: white;
+        font-family: 'work', Fallback, sans-serif;
+    }
+
+    .title {
+        font-family: Arial;
+        font-size: 2em;
+        color: black;
+        margin-bottom: 15px;
+        display: block;
+        width: 600px;
+    }
+
+    p {
+        font-family: Arial;
+        font-size: 1em;
+        width: 600px;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        margin: 0px;
+    }
+
+    .nav-about {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        margin: 30px;
+    }
+
+    .nav-backtotop {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        margin: 30px;
+    }
+
+    .nav-poem {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        margin: 30px;
+    }
+
+    a.inner {
+        font-size: 1em;
+        color: blue;
+        transition: color .25s ease;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        transition: all .5s ease;
+        cursor: grab;
+        transform: rotate(90deg);
+        font-size: 1em;
+    }
 
 }
