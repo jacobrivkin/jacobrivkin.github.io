@@ -1,0 +1,63 @@
+import requests
+import time
+from bs4 import BeautifulSoup
+
+def download_file(url, local_filename=None):
+    """
+    Downloads a file from a remote URL
+    """
+    if local_filename is None:
+        local_filename = url.split("/")[-1]
+    with requests.get(url, stream=True) as r:
+        r.raise_for_status()
+        with open(local_filename, "wb") as f:
+            for chunk in r.iter_content(chunk_size=8192):
+                f.write(chunk)
+    return local_filename
+
+
+linkList = []
+
+page=1
+
+# Ran Through 40
+
+for page in range(1,90):
+    # get original Links
+    url= "https://stargazerslounge.com/forum/21-sketching/page/"+str(page)
+    # print(url)
+    response = requests.get(url)
+
+    soup=BeautifulSoup(response.text, "html.parser")
+
+    titles = soup.select("h4 > span > a")
+    for t in titles:
+        conlinks = t['href']
+        # print(conlinks)
+        linkList.append(conlinks)
+    time.sleep(0.5)
+print(linkList)
+
+"""
+#GO THROUGH LIST OF LINKS
+for url in linkList:
+    response = requests.get(url)
+    soup=BeautifulSoup(response.text, "html.parser")
+    description = soup.select("a.ipsAttachLink.ipsAttachLink_image > .ipsImage")
+    for t in description:
+        # innerText=t.text.strip()
+        conlinks = t['src']
+        # print(conlinks)
+        if conlinks.startswith("https://stargazerslounge.com/uploads"):
+            print(conlinks)
+            # download_file(conlinks)
+    time.sleep(0.5)
+
+"""
+
+
+
+
+
+
+
