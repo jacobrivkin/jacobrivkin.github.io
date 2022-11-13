@@ -112,6 +112,13 @@ a:hover {
     /* transform: rotate(45deg); */
 }
 
+.backhome{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    margin: 0px;
+    z-index: 100;
+}
 /*RESIZE*/
 
 /* VERTICAL */
@@ -193,7 +200,7 @@ a:hover {
         margin: 20px;
     }
 
-
+ 
 
 }
 
