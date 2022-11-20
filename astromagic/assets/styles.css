@@ -1,183 +1,184 @@
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    background: grey;
-    position: relative;
-    /* height: 100vh; */
-  }
-
-  img {
-    object-fit: contain;
-    display: inline-block;
-    opacity: .8;
-    /* width: 4%; */
-    height: 400px;
-    mix-blend-mode: lighten;
-    /* margin-right: -100px; */
-    /* margin-bottom: -50px; */
-    padding: 0px;
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-
-
-  .container {
-    cursor: grab;
-    /* overflow: auto;
-    height: 1000vh; */
-    position: relative;
-    z-index: -1;
-    /* padding: 0px 2rem; */
-    /* width: 100vw; */
-    background-color: grey;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-
-  #centerText {
-    width: 100vw;
-    height: 100vh;
-    z-index: 2;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    color:white;
-    letter-spacing: 2px;
-  }
-  .nav{
-    position: fixed;
-    top:0;
-    left:0;
-    opacity: .75;
-    margin:20px;
-    z-index:100;
-  }
-
-  a{
-    font-size: 2.5em;
-    transition: all 1s ease;
-    color:white;
-    text-decoration: none;
-
-  }
-
-  .nav a:hover {
-    color: red;
-  }
-
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: grey;
-    position: relative;
-    /* height: 100vh; */
+  background: grey;
+  position: relative;
+  /* height: 100vh; */
 }
 
 img {
-    object-fit: contain;
-    display: inline-block;
-    opacity: .8;
-    /* width: 4%; */
-    height: 400px;
-    mix-blend-mode: lighten;
-    /* margin-right: -100px; */
-    /* margin-bottom: -50px; */
-    padding: 0px;
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  object-fit: contain;
+  display: inline-block;
+  opacity: .8;
+  /* width: 4%; */
+  width: 400px;
+  mix-blend-mode: lighten;
+  /* margin-right: -100px; */
+  /* margin-bottom: -50px; */
+  padding: 0px;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  transition: all 2.5s ease;
+}
+
+.archive{
+  object-fit: contain;
+  display: inline-block;
+  opacity: .8;
+  /* width: 4%; */
+  width: 400px;
+  mix-blend-mode: lighten;
+  /* margin-right: -100px; */
+  /* margin-bottom: -50px; */
+  padding: 0px;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  margin-bottom:0;
+  margin-right:0;
+  object-position:0 0;
 }
 
 
 .container {
-    cursor: grab;
-    /* overflow: auto;
-height: 1000vh; */
-    position: relative;
-    z-index: -1;
-    /* padding: 0px 2rem; */
-    /* width: 100vw; */
-    background-color: grey;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  cursor: grab;
+  /* overflow: auto;
+  height: 1000vh; */
+  position: relative;
+  z-index: -1;
+  /* padding: 0px 2rem; */
+  /* width: 100vw; */
+  background-color: grey;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #centerText {
-    width: 100vw;
-    height: 100vh;
-    z-index: 2;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.introMover{
+  animation: closeOpen 2s ease both alternate infinite;
+  /* animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode:both;
+  animation-direction: alternate;
+  animation-iteration-count: infinite; */
+}
+.introSpin{
+  animation: rotateAgain 2s linear both alternate infinite;
+}
+
+@keyframes closeOpen{
+  0%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+@keyframes rotateAgain{
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+}
+
+
 p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    color: white;
-    letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  color: white;
+  letter-spacing: 2px;
 }
 
 .nav {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    margin: 0px;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: .75;
+  margin: 20px;
+  z-index: 100;
+}
+
+.archiveView {
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: .75;
+  margin: 20px;
+  z-index: 100;
+  font-size: 2.5em;
+  transition: color .5s ease;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.archiveView:hover {
+  color: red;
 }
 
 a {
-    font-size: 2.5em;
-    opacity: .5;
-    transition: all .5s ease;
-    color: white;
-    text-decoration: none;
+  font-size: 2.5em;
+  transition: color .5s ease;
+  color: white;
+  text-decoration: none;
 
+}
+
+.nav a:hover {
+  color: red;
 }
 
 p.staticText.about {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 p.staticText.about a {
-    font-size: 1em;
-    opacity: 1;
-    transition: all .5s ease;
-    color: blue;
+  font-size: 1em;
+  opacity: 1;
+  transition: all .5s ease;
+  color: blue;
 }
 
 .about {
-    width: 75%;
+  width: 75%;
 }
 
 a:hover {
-    color: rgb(253, 176, 176);
+  color: rgb(253, 176, 176);
 }
 
 p.staticText.about a:hover {
-    color: white;
+  color: white;
+}
+
+.backhome {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  margin: 0px;
+  z-index: 100;
 }

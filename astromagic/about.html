@@ -6,115 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <!-- <link rel="icon" href="http://example.com/favicon.png"> -->
     <title>drawings for the moon</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0px;
-            padding: 0px;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: grey;
-            position: relative;
-            /* height: 100vh; */
-        }
-
-        img {
-            object-fit: contain;
-            display: inline-block;
-            opacity: .8;
-            /* width: 4%; */
-            height: 400px;
-            mix-blend-mode: lighten;
-            /* margin-right: -100px; */
-            /* margin-bottom: -50px; */
-            padding: 0px;
-            user-drag: none;
-            -webkit-user-drag: none;
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-
-
-        .container {
-            cursor: grab;
-            /* overflow: auto;
-      height: 1000vh; */
-            position: relative;
-            z-index: -1;
-            /* padding: 0px 2rem; */
-            /* width: 100vw; */
-            background-color: grey;
-            overflow-x: hidden;
-            overflow-y: hidden;
-        }
-
-        #centerText {
-            width: 100vw;
-            height: 100vh;
-            z-index: 2;
-            position: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 3em;
-            color: white;
-            letter-spacing: 2px;
-        }
-
-        .nav {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            margin: 0px;
-            z-index: 100;
-        }
-
-        a {
-            font-size: 2.5em;
-            opacity:.5;
-            transition: all .5s ease;
-            color: white;
-            text-decoration: none;
-
-        }
-        p.staticText.about {
-            font-size: 2em;
-        }
-        p.staticText.about a {
-            font-size: 1em;
-            opacity:1;
-            transition: all .5s ease;
-            color:blue;
-        }
-
-        .about{
-            width:75%;
-        }
-
-        a:hover {
-            color: rgb(253, 176, 176);
-        }
-
-        p.staticText.about a:hover {
-            color:white;
-        }
-        .backhome{
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            margin: 0px;
-            z-index: 100;
-        }
-
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
@@ -124,8 +16,7 @@
         <div class="backhome"><a href="../index.html">△▽</a></div>
         <div id="centerText">
             <p class="staticText about">These images were webscraped and collected from <a
-                    href="https://stargazerslounge.com/forum/21-sketching/">the Stargazers Lounge</a> forum on sketching drawings of
-                the night sky.</p>
+                    href="https://stargazerslounge.com/forum/21-sketching/">the Stargazers Lounge</a> forum on sketching drawings of the night sky. The images are cropped based on the current phase of the moon, with the full image being revealed only on each cycle of the Full Moon</p>
         </div>
     </section>
 
