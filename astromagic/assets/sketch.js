@@ -8,11 +8,38 @@ let mapMoon;
 let archiver;
 let moonImgs;
 let sw = true;
+let screenW;
+let minRando=0;
+let maxRando=0;
+let moonImageSize = 0
+
 
 function setup() {
     loadJSON(url, gotData);
     archiver = select(".archiveView");
     archiver.mousePressed(changeView);
+
+    checkMoonSize()
+}
+
+function checkMoonSize(){
+        //check screen size
+        if(window.screen.availWidth<=600){
+            minRando=-100;
+            maxRando=50;
+            moonImageSize=200;
+        }else{
+            minRando=-400;
+            maxRando= 50;
+            moonImageSize=400;
+        }
+
+        if (moonPhase >= 0 && moonPhase <= .5) {
+            mapMoon = map(moonPhase, 0, .5, (-1*moonImageSize), 0)
+        } else if (moonPhase >= .51 && moonPhase <= 1) {
+            mapMoon = map(moonPhase, .5, 1, 0, moonImageSize)
+        }
+        print(maxRando,minRando,moonImageSize,mapMoon);
 }
 
 function gotData(data) {
@@ -26,40 +53,41 @@ function gotData(data) {
     moonText.removeClass("introSpin");
     moonText.html("The moon overhead is currently a " + mType + ".");
     moonImgs = selectAll('img');
-    if (moonPhase >= 0 && moonPhase <= .5) {
-        mapMoon = map(moonPhase, 0, .5, -400, 0)
-    } else if (moonPhase >= .51 && moonPhase <= 1) {
-        mapMoon = map(moonPhase, .5, 1, 0, 400)
-    }
-    print(mapMoon);
+    
+    checkMoonSize()
+
     for (i = 0; i < moonImgs.length; i++) {
         // moonImgs[i].style("opacity", moonPhase);
         moonImgs[i].style("object-position", mapMoon + "px" + " 0");
-        moonImgs[i].style("marginRight", Math.floor(random(-400, 50)) + "px");
-        moonImgs[i].style("marginBottom", Math.floor(random(-400, 50)) + "px");
+        moonImgs[i].style("marginRight", Math.floor(random(minRando, maxRando)) + "px");
+        moonImgs[i].style("marginBottom", Math.floor(random(minRando, maxRando)) + "px");
     }
 }
 
 function changeView() {
+
+    checkMoonSize()
+
     if (sw == true) {
         for (i = 0; i < moonImgs.length; i++) {
 
             moonImgs[i].style("object-position", "0" + " 0");
             moonImgs[i].style("marginRight", "0px");
+            moonImgs[i].style("marginLeft", "0px");
             moonImgs[i].style("marginBottom", "0px");
             moonImgs[i].addClass("archive");
         }
         sw = false;
     } else {
         for (i = 0; i < moonImgs.length; i++) {
+            let chooseMargin = ["marginLeft","marginRight"]
             moonImgs[i].style("object-position", mapMoon + "px" + " 0");
-            moonImgs[i].style("marginRight", Math.floor(random(-400, 50)) + "px");
-            moonImgs[i].style("marginBottom", Math.floor(random(-400, 50)) + "px");
+            moonImgs[i].style(random(chooseMargin), Math.floor(random(minRando, maxRando)) + "px");
+            moonImgs[i].style("marginBottom", Math.floor(random(minRando, maxRando)) + "px");
             moonImgs[i].removeClass("archive");
         }
         sw = true;
     }
-    print(sw);
 }
 
 function getMoon(m) {
