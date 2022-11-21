@@ -21,6 +21,28 @@ function setup() {
 
 }
 
+function gotData(data) {
+    // print(data);
+    weather = data;
+    moonPhase = weather.days[0].moonphase;
+    print(moonPhase);
+    mType = (getMoon(moonPhase));
+    moonText = select(".staticText");
+    moonText.removeClass("introMover");
+    moonText.removeClass("introSpin");
+    moonText.html("The moon is currently a " + mType + ".");
+    moonImgs = selectAll('img');
+
+    checkMoonSize()
+
+    for (i = 0; i < moonImgs.length; i++) {
+        // moonImgs[i].style("opacity", moonPhase);
+        moonImgs[i].style("object-position", mapMoon + "px" + " 0");
+        moonImgs[i].style("marginRight", Math.floor(random(minRando, maxRando)) + "px");
+        moonImgs[i].style("marginBottom", Math.floor(random(minRando, maxRando)) + "px");
+    }
+}
+
 function checkMoonSize() {
     print("the window size is: " + window.innerWidth)
     //check screen size
@@ -42,28 +64,6 @@ function checkMoonSize() {
         print("towards new moon")
     }
     print(maxRando, minRando, moonImageSize, mapMoon);
-}
-
-function gotData(data) {
-    // print(data);
-    weather = data;
-    moonPhase = weather.days[0].moonphase;
-    print(moonPhase);
-    mType = (getMoon(moonPhase));
-    moonText = select(".staticText");
-    moonText.removeClass("introMover");
-    moonText.removeClass("introSpin");
-    moonText.html("The moon overhead is currently a " + mType + ".");
-    moonImgs = selectAll('img');
-
-    checkMoonSize()
-
-    for (i = 0; i < moonImgs.length; i++) {
-        // moonImgs[i].style("opacity", moonPhase);
-        moonImgs[i].style("object-position", mapMoon + "px" + " 0");
-        moonImgs[i].style("marginRight", Math.floor(random(minRando, maxRando)) + "px");
-        moonImgs[i].style("marginBottom", Math.floor(random(minRando, maxRando)) + "px");
-    }
 }
 
 function changeView() {
@@ -101,7 +101,7 @@ function getMoon(m) {
         return "Waning Gibbous";
     } else if (m >= 0.75 && m <= 1) {
         return "Waning Crescent";
-    } else if (m == 0) {
+    } else if (m == 0 || m == 1 ) {
         return "New Moon";
     } else if (m == .25) {
         return "First Quarter";
