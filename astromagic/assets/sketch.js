@@ -4,13 +4,13 @@ let weather;
 let moonPhase;
 let moonText;
 let mType;
-let mapMoon;
+let mapMoon = 0;
 let archiver;
 let moonImgs;
 let sw = true;
 let screenW;
-let minRando=0;
-let maxRando=0;
+let minRando = 0;
+let maxRando = 0;
 let moonImageSize = 0
 
 
@@ -19,27 +19,29 @@ function setup() {
     archiver = select(".archiveView");
     archiver.mousePressed(changeView);
 
-    checkMoonSize()
 }
 
-function checkMoonSize(){
-        //check screen size
-        if(window.screen.availWidth<=600){
-            minRando=-100;
-            maxRando=50;
-            moonImageSize=200;
-        }else{
-            minRando=-400;
-            maxRando= 50;
-            moonImageSize=400;
-        }
+function checkMoonSize() {
+    print("the window size is: " + window.innerWidth)
+    //check screen size
+    if (window.innerWidth <= 600) {
+        minRando = -75;
+        maxRando = 25;
+        moonImageSize = 200;
+    } else {
+        minRando = -400;
+        maxRando = 50;
+        moonImageSize = 400;
+    }
 
-        if (moonPhase >= 0 && moonPhase <= .5) {
-            mapMoon = map(moonPhase, 0, .5, (-1*moonImageSize), 0)
-        } else if (moonPhase >= .51 && moonPhase <= 1) {
-            mapMoon = map(moonPhase, .5, 1, 0, moonImageSize)
-        }
-        print(maxRando,minRando,moonImageSize,mapMoon);
+    if (moonPhase >= 0 && moonPhase <= .5) {
+        mapMoon = int(map(moonPhase, 0, .5, (-1 * moonImageSize), 0));
+        print("towards full moon")
+    } else if (moonPhase >= .51 && moonPhase <= 1) {
+        mapMoon = int(map(moonPhase, .5, 1, 0, moonImageSize));
+        print("towards new moon")
+    }
+    print(maxRando, minRando, moonImageSize, mapMoon);
 }
 
 function gotData(data) {
@@ -53,7 +55,7 @@ function gotData(data) {
     moonText.removeClass("introSpin");
     moonText.html("The moon overhead is currently a " + mType + ".");
     moonImgs = selectAll('img');
-    
+
     checkMoonSize()
 
     for (i = 0; i < moonImgs.length; i++) {
@@ -80,7 +82,7 @@ function changeView() {
         sw = false;
     } else {
         for (i = 0; i < moonImgs.length; i++) {
-            let chooseMargin = ["marginLeft","marginRight"]
+            let chooseMargin = ["marginLeft", "marginRight"]
             moonImgs[i].style("object-position", mapMoon + "px" + " 0");
             moonImgs[i].style(random(chooseMargin), Math.floor(random(minRando, maxRando)) + "px");
             moonImgs[i].style("marginBottom", Math.floor(random(minRando, maxRando)) + "px");

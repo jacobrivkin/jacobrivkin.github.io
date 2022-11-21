@@ -113,6 +113,8 @@ p {
   letter-spacing: 2px;
 }
 
+
+
 .nav {
   position: fixed;
   top: 0;
@@ -151,9 +153,13 @@ a {
 .nav a:hover {
   color: red;
 }
+p.staticText{
+  padding:20px;
+}
 
 p.staticText.about {
   font-size: 2em;
+  padding: 20px;
 }
 
 p.staticText.about a {
