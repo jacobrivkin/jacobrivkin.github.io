@@ -174,35 +174,22 @@ a {
 p.staticText {
   padding: 20px;
   transition: all 4s ease;
-  
 }
 
 .animateOn{
   animation: turnOn 2s ease both alternate 1;
 }
 
-.animateOff{
-  animation: turnOff 2s ease both alternate 1;
-}
-
 @keyframes turnOn {
   0% {
-    transform:translateX(-50vw)
+    letter-spacing: 0px;
+    /* transform:translateX(-50vw) */
   }
 
   100% {
-    transform:translateX(0vh)
+    letter-spacing: 100px;
+    /* transform:translateX(0vh) */
 
-  }
-}
-
-@keyframes turnOff {
-  0% {
-    transform:translateX(0vh)
-  }
-
-  100% {
-    transform:translateX(150vw)
   }
 }
 

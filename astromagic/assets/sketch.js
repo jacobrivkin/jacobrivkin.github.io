@@ -21,17 +21,20 @@ function setup() {
     loadJSON(url, gotData);
     archiver = select(".archiveView");
     archiver.mousePressed(changeView);
-}
-
-function draw() {
-    scrollPos = window.scrollY
-    scrollHeight = document.body.clientHeight;
-    // print("The scroll height  is: "+ scrollHeight);
-    // print("The scroll position is: " + scrollPos);
-    scrollMoon(scrollPos, scrollHeight);
-    // print(window.innerHeight);
 
 }
+
+
+
+
+// function draw() {
+//     scrollPos = window.scrollY
+//     scrollHeight = document.body.clientHeight;
+//     // print("The scroll height  is: "+ scrollHeight);
+//     // print("The scroll position is: " + scrollPos);
+//     scrollMoon(scrollPos, scrollHeight);
+//     // print(window.innerHeight);
+// }
 
 
 
@@ -48,49 +51,80 @@ function draw() {
 
 let ogState = true;
 function detectChange(x) {
+
+    //initialize
     if (ogState) {
         oldState = x;
         ogState = false;
     }
 
     if (oldState == x) {
-   
+        //no change
+        return false;
     } else {
-       oldState = x;
-        
+        oldState = x;
+        //changed
+        return true;
     }
 }
 
+
+
+window.addEventListener("load", (event) => {
+    
+    let lastKnownScrollPosition = 0;
+    document.addEventListener('scroll', (e) => {
+        lastKnownScrollPosition = window.scrollY;
+        scrollHeight = document.body.clientHeight;
+        scrollMoon(lastKnownScrollPosition, scrollHeight);
+
+    });
+    console.log("page is fully loaded");
+    
+});
+
+counter = 0;
+
 function scrollMoon(pos, totalHeight) {
-    moonText = select(".staticText");
+    moonText = select("#staticText");
+    centerText = select("#centerText")
     archiveView = select(".archiveView");
-    centerText = select(".centerText");
     moonText.removeClass("introMover");
     moonText.removeClass("introSpin");
     let tx = moonText.html()
     // detectChange(tx);
 
-    pos = int(pos);
+
     if (pos > 0 && pos < totalHeight * .1) {
+
         moonText.html("↓");
-  
+        counter++;
+        // moonText.toggleClass("animateOn")
     }
     else if (pos > totalHeight * .1 && pos < totalHeight * .2) {
         moonText.html("The");
+        // moonText.toggleClass("animateOn")
+        counter++;
+
         // moonText.style("transform","translateX(-45vw)");
 
     }
     else if (pos > totalHeight * .2 && pos < totalHeight * .3) {
         moonText.html("The moon");
+        // moonText.toggleClass("animateOn")
+        counter++;
+
         // moonText.style("transform","translateX(-40vw)");
     }
     else if (pos > totalHeight * .3 && pos < totalHeight * .4) {
         moonText.html("The moon is");
+        // moonText.toggleClass("animateOn")
         // moonText.style("transform","translateX(-35vw)");
 
     }
     else if (pos > totalHeight * .4 && pos < totalHeight * .5) {
         moonText.html("The moon is getting");
+        // moonText.toggleClass("animateOn")
         // moonText.style("transform","translateX(-30vw)");
 
     }
@@ -119,8 +153,8 @@ function scrollMoon(pos, totalHeight) {
 
     }
     else if (pos > (totalHeight - (window.innerHeight * 2)) && pos < totalHeight) {
-        moonText.style("display","none")
-        archiveView.style("display","block")
+        moonText.style("display", "none")
+        archiveView.style("display", "block")
         // moonText.style("transform","translateX(0vw)");
     }
 }
@@ -191,9 +225,6 @@ function changeView() {
         for (i = 0; i < moonImgs.length; i++) {
 
             moonImgs[i].style("object-position", "0" + " 0");
-            // moonImgs[i].style("marginRight", "0px");
-            // moonImgs[i].style("marginLeft", "0px");
-            // moonImgs[i].style("marginBottom", "0px");
             moonImgs[i].addClass("archive");
         }
         sw = false;
