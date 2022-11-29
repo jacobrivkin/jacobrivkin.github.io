@@ -1,3 +1,5 @@
+p5.disableFriendlyErrors = true;
+
 url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Philadelphia?unitGroup=us&include=days&key=W2MX5BG5NHFHC2LEP84U38X7F&contentType=json";
 let data;
 let weather;
@@ -15,26 +17,50 @@ let moonImageSize = 0
 let makeVisible = false;
 let scrollPos = 0;
 let scrollHeight = 0;
+let mx = 0;
+let xoff = 0.0;
 
 function setup() {
 
     loadJSON(url, gotData);
     archiver = select(".archiveView");
     archiver.mousePressed(changeView);
-
+    moonImgs = selectAll('img');
 }
 
+function draw() {
+
+    if (window.innerWidth <= 600) {
+        moonImageSize = 200;
+    } else {
+        moonImageSize = 400;
+    }
+
+    tx = xoff
+
+    if (tx <= windowWidth / 2) {
+        // mapMoon = int(map(moonPhase, 0, .5, (-1 * moonImageSize), 0));
+        mx = int(map(tx, 0, windowWidth / 2, -moonImageSize, moonImageSize))
+    } else if (tx >= windowWidth / 2) {
+        // mapMoon = int(map(moonPhase, .5, 1, 0, moonImageSize));
+        mx = int(map(tx, windowWidth / 2, windowWidth, moonImageSize, moonImageSize * 2))
+    }
+    // print(moonImgs);
 
 
+    for (i = 0; i < moonImgs.length; i++) {
+        moonImgs[i].style("object-position", mapMoon + mx + "px" + " 0");
+        // moonImgs[i].style("marginBottom", Math.floor(noise(xoff) * 500) + "px");
 
-// function draw() {
-//     scrollPos = window.scrollY
-//     scrollHeight = document.body.clientHeight;
-//     // print("The scroll height  is: "+ scrollHeight);
-//     // print("The scroll position is: " + scrollPos);
-//     scrollMoon(scrollPos, scrollHeight);
-//     // print(window.innerHeight);
-// }
+    }
+    xoff = xoff + 5;
+    if (xoff >= windowWidth + moonImageSize / 2) {
+        xoff = 0;
+    }
+}
+
+//MAKE AN OBJECT DUDE
+
 
 
 
@@ -49,29 +75,29 @@ function setup() {
 // }
 
 
-let ogState = true;
-function detectChange(x) {
+// let ogState = true;
+// function detectChange(x) {
 
-    //initialize
-    if (ogState) {
-        oldState = x;
-        ogState = false;
-    }
+//     //initialize
+//     if (ogState) {
+//         oldState = x;
+//         ogState = false;
+//     }
 
-    if (oldState == x) {
-        //no change
-        return false;
-    } else {
-        oldState = x;
-        //changed
-        return true;
-    }
-}
+//     if (oldState == x) {
+//         //no change
+//         return false;
+//     } else {
+//         oldState = x;
+//         //changed
+//         return true;
+//     }
+// }
 
 
 
 window.addEventListener("load", (event) => {
-    
+
     let lastKnownScrollPosition = 0;
     document.addEventListener('scroll', (e) => {
         lastKnownScrollPosition = window.scrollY;
@@ -80,7 +106,7 @@ window.addEventListener("load", (event) => {
 
     });
     console.log("page is fully loaded");
-    
+
 });
 
 counter = 0;
@@ -259,3 +285,30 @@ function getMoon(m) {
         return "Last Quarter";
     }
 }
+
+
+class MoonImage {
+
+    constructor() {
+        // this.mx = random(width);
+        
+    }
+
+
+    show() {
+        checkMoonSize();
+        this.style("marginRight", Math.floor(random(minRando, maxRando)) + "px");
+        this.style("marginBottom", Math.floor(random(minRando, maxRando)) + "px");
+        this.style("object-position", 0 + "px" + " 0");
+        this.style("opacity", ".8");
+
+    }
+
+    move(mover){
+        this.style("object-position", mover + "px" + " 0");
+
+    }
+
+}
+
+

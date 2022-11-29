@@ -27,7 +27,8 @@ img {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  transition: opacity 2.5s ease, object-position 2.5s ease;
+  /* transition: opacity 2.5s ease, object-position 2.5s ease; */
+  transition: opacity 2.5s ease;
 }
 
 .archive {
