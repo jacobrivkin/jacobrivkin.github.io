@@ -201,6 +201,8 @@ p.staticText {
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 
 #two{
@@ -208,54 +210,73 @@ p.staticText {
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
+  
 }
 #three{
   display:none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 #four{
   display:none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 #five{
   display:none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 #six{
   display:none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 #seven{
   display:none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 #eight{
   display:none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 #nine{
   display:none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 #ten{
   display:none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
   padding:0 40px;
+  font-size: 2.25em;
+  width:70%;
 }
 
 p.staticText.about {
