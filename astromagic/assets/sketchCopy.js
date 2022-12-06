@@ -196,67 +196,85 @@ function scrollMoon(pos, totalHeight) {
     moonText.removeClass("introSpin");
     let tx = moonText.html()
     // detectChange(tx);
+    one= select("#one");
+    two= select("#two");
+    three= select("#three");
+    four= select("#four");
+    five= select("#five");
+    six= select("#six");
+    seven= select("#seven");
+    eight= select("#eight");
+    nine= select("#nine");
+    ten= select("#ten");
 
 
     if (pos > 0 && pos < totalHeight * .1) {
+        
+        select("#one").style("display","block");
+        select("#two").style("display","none");
+        select("#staticText").style("display","none");
+        // ("animation", "turnOn 2s ease both reverse 1")
 
-        moonText.html("↓");
-        counter++;
-        // moonText.toggleClass("animateOn")
+
     }
     else if (pos > totalHeight * .1 && pos < totalHeight * .2) {
-        moonText.html("The");
-        // moonText.toggleClass("animateOn")
-        counter++;
+        select("#two").style("display","block");
+        select("#one").style("display","none");
+        select("#three").style("display","none");
 
-        // moonText.style("transform","translateX(-45vw)");
+
 
     }
     else if (pos > totalHeight * .2 && pos < totalHeight * .3) {
-        moonText.html("The moon");
-        // moonText.toggleClass("animateOn")
-        counter++;
-
-        // moonText.style("transform","translateX(-40vw)");
+        select("#three").style("display","block");
+        select("#two").style("display","none");
+        select("#four").style("display","none");
     }
     else if (pos > totalHeight * .3 && pos < totalHeight * .4) {
-        moonText.html("The moon is");
-        // moonText.toggleClass("animateOn")
-        // moonText.style("transform","translateX(-35vw)");
-
+        select("#four").style("display","block");
+        select("#three").style("display","none");
+        select("#five").style("display","none");
     }
     else if (pos > totalHeight * .4 && pos < totalHeight * .5) {
-        moonText.html("The moon is getting");
-        // moonText.toggleClass("animateOn")
-        // moonText.style("transform","translateX(-30vw)");
-
+        
+        select("#five").style("display","block");
+        select("#four").style("display","none");
+        select("#six").style("display","none");
     }
     else if (pos > totalHeight * .5 && pos < totalHeight * .6) {
-        moonText.html("The moon is getting closer");
-        // moonText.style("transform","translateX(-25vw)");
-
+        select("#six").style("display","block");
+        select("#five").style("display","none");
+        select("#seven").style("display","none");
     }
     else if (pos > totalHeight * .6 && pos < totalHeight * .7) {
-        moonText.html("The moon is getting closer to");
-        // moonText.style("transform","translateX(-20vw)");
+        select("#seven").style("display","block");
+        select("#six").style("display","none");
+        select("#eight").style("display","none");
     }
     else if (pos > totalHeight * .7 && pos < totalHeight * .8) {
-        moonText.html("The moon is getting closer to your");
-        // moonText.style("transform","translateX(-15vw)");
+        select("#eight").style("display","block");
+        select("#seven").style("display","none");
+        select("#nine").style("display","none");
 
     }
     else if (pos > totalHeight * .8 && pos < totalHeight * .9) {
-        moonText.html("The moon is getting closer to your hand");
-        // moonText.style("transform","translateX(-10vw)");
-
+        select("#nine").style("display","block");
+        select("#eight").style("display","none");
+        select("#ten").style("display","none");
     }
     else if (pos > totalHeight * .9 && pos < (totalHeight - (window.innerHeight * 2))) {
-        moonText.html("The moon is currently a " + mType + ".");
-        // moonText.style("transform","translateX(-5vw)");
+      
+        select("#ten").style("display","block");
+        select("#ten").html("The moon is currently a " + mType + ".");
+        
+        select("#nine").style("display","none");
+        // archiveView.style("display","none");
+        archiveView.style("display", "none")
 
     }
     else if (pos > (totalHeight - (window.innerHeight * 2)) && pos < totalHeight) {
-        moonText.style("display", "none")
+        // moonText.style("display", "none")
+        select("#ten").style("display","none");
         archiveView.style("display", "block")
         // moonText.style("transform","translateX(0vw)");
     }
