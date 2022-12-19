@@ -188,6 +188,14 @@ window.addEventListener("load", (event) => {
 
 counter = 0;
 
+window.addEventListener("load", scroller);
+
+function scroller(){
+    scrollText = select("#downArrow");
+    select("#staticText").style("display","none");
+    scrollText.style("display","block");
+}
+
 function scrollMoon(pos, totalHeight) {
     moonText = select("#staticText");
     centerText = select("#centerText")
@@ -209,10 +217,10 @@ function scrollMoon(pos, totalHeight) {
 
 
     if (pos > 0 && pos < totalHeight * .1) {
-        
+        select("#downArrow").style("display","none");
         select("#one").style("display","block");
         select("#two").style("display","none");
-        select("#staticText").style("display","none");
+        // select("#staticText").style("display","none");
         // ("animation", "turnOn 2s ease both reverse 1")
 
 

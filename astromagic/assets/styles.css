@@ -6,9 +6,13 @@
 }
 
 body {
-  background:  rgb(39, 39, 39);
+  background: rgb(39, 39, 39);
   position: relative;
   /* height: 100vh; */
+}
+
+#about {
+  background: rgb(143, 143, 143);
 }
 
 img {
@@ -109,8 +113,19 @@ img {
   }
 }
 
-#downArrow{
+#downArrow {
   display: none;
+  animation: updown 2s ease-in-out both alternate infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-30px); 
+  }
 }
 
 p {
@@ -136,7 +151,7 @@ p {
   top: 0;
   right: 0; */
   opacity: 0.8;
-  display:none;
+  display: none;
   /* margin: 20px; */
   /* rotate:45deg; */
   z-index: 100;
@@ -149,14 +164,14 @@ p {
 
 }
 
-@keyframes rotateforever{
-0%{
-rotate:0deg;
-}
-100%{
-rotate:360deg;
-}
+@keyframes rotateforever {
+  0% {
+    rotate: 0deg;
+  }
 
+  100% {
+    rotate: 360deg;
+  }
 }
 
 .archiveView:hover {
@@ -182,106 +197,114 @@ p.staticText {
 
 
 
-.animateOn{
+.animateOn {
   animation: turnOn 2s ease both alternate 1;
 }
 
 @keyframes turnOn {
   0% {
-    opacity:0;
+    opacity: 0;
     /* transform:translateX(-50vw) */
   }
 
   100% {
-    opacity:1;
+    opacity: 1;
     /* transform:translateX(0vh) */
 
   }
 }
 
-#one{
-  display:none;
+#one {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
-  position:relative;
+  width: 70%;
+  position: relative;
   z-index: -100;
 }
 
-#two{
-  display:none;
+#two {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
-  
+  width: 70%;
+
 }
-#three{
-  display:none;
+
+#three {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
+  width: 70%;
 }
-#four{
-  display:none;
+
+#four {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
+  width: 70%;
 }
-#five{
-  display:none;
+
+#five {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
+  width: 70%;
 }
-#six{
-  display:none;
+
+#six {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
+  width: 70%;
 }
-#seven{
-  display:none;
+
+#seven {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
+  width: 70%;
 }
-#eight{
-  display:none;
+
+#eight {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
+  width: 70%;
 }
-#nine{
-  display:none;
+
+#nine {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
+  width: 70%;
 }
-#ten{
-  display:none;
+
+#ten {
+  display: none;
   animation: turnOn 2s ease both alternate 1;
   transition: 2s all ease, display 4s ease;
-  padding:0 40px;
+  padding: 0 40px;
   font-size: 2.25em;
-  width:70%;
+  width: 70%;
 }
 
 p.staticText.about {
