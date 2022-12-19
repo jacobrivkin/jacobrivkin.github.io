@@ -310,12 +310,13 @@ p.staticText {
 p.staticText.about {
   font-size: 2em;
   padding: 20px;
+  transition:none;
 }
 
 p.staticText.about a {
   font-size: 1em;
   opacity: 1;
-  transition: all .5s ease;
+  transition: color .5s ease;
   color: blue;
 }
 
