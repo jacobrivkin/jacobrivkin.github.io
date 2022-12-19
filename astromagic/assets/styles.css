@@ -13,6 +13,7 @@ body {
 
 #about {
   background: rgb(143, 143, 143);
+  font-size: .75em;
 }
 
 img {
@@ -155,7 +156,7 @@ p {
   /* margin: 20px; */
   /* rotate:45deg; */
   z-index: 100;
-  font-size: 3em;
+  font-size: 2em;
   transition: color .5s ease;
   color: white;
   text-decoration: none;
@@ -489,6 +490,8 @@ p.staticText.about a:hover {
     font-size: 1.5em;
     width: 80%;
   }
-  
+  .archiveView{
+    font-size:1.5em;
+  }
 
 }
