@@ -113,11 +113,11 @@ class MoonImage {
     constructor(img) {
         // this.mx = random(width);
         this.xoff = 0.0;
-        this.mover = Math.floor(random(-50, 100));
+        this.mover = Math.floor(random(-50, 50));
         this.minRando = 0;
         this.maxRando = 0;
         this.img = img;
-        this.randomOff = random(0.1, 2);
+        this.randomOff = random(0.05, 2);
     }
 
 
@@ -127,7 +127,7 @@ class MoonImage {
         this.img.style("marginRight", Math.floor(random(minRando, maxRando)) + "px");
         this.img.style("marginBottom", Math.floor(random(minRando, maxRando)) + "px");
         this.img.style("object-position", this.mover + "px" + " 0");
-        this.img.style("opacity", ".75");
+        this.img.style("opacity", ".6");
 
     }
 
