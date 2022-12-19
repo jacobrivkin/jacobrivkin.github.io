@@ -397,4 +397,98 @@ p.staticText.about a:hover {
 
   }
 
+  #one {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+    position: relative;
+    z-index: -100;
+  }
+  
+  #two {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  
+  }
+  
+  #three {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+  
+  #four {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+  
+  #five {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+  
+  #six {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+  
+  #seven {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+  
+  #eight {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+  
+  #nine {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+  
+  #ten {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s all ease, display 4s ease;
+    padding: 0 10px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+  
+
 }
