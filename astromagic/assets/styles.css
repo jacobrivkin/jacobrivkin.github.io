@@ -341,14 +341,16 @@ p.staticText.about a:hover {
   z-index: 100;
 }
 
-@media only screen and (max-width: 600px) {
+/* ipads and midrange size */
+
+@media only screen and (max-width: 900px) and (min-width: 600px){
 
   img {
     object-fit: contain;
     display: inline-block;
     opacity: 0;
     /* width: 4%; */
-    width: 200px;
+    width: 300px;
     mix-blend-mode: lighten;
     /* margin-right: -100px; */
     /* margin-bottom: -50px; */
@@ -435,7 +437,7 @@ p.staticText.about a:hover {
     animation: turnOn 2s ease both alternate 1;
     transition: 2s opacity ease;
     padding: 0 10px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     width: 80%;
   }
   
@@ -462,7 +464,7 @@ p.staticText.about a:hover {
     animation: turnOn 2s ease both alternate 1;
     transition: 2s opacity ease;
     padding: 0 10px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     width: 80%;
   }
   
@@ -480,7 +482,7 @@ p.staticText.about a:hover {
     animation: turnOn 2s ease both alternate 1;
     transition: 2s opacity ease;
     padding: 0 10px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     width: 80%;
   }
   
@@ -490,6 +492,167 @@ p.staticText.about a:hover {
     transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
+    width: 80%;
+  }
+  .archiveView{
+    font-size:1.5em;
+  }
+
+}
+
+
+/* Smaller screen size */
+
+
+@media only screen and (max-width: 600px) {
+
+  img {
+    object-fit: contain;
+    display: inline-block;
+    opacity: 0;
+    /* width: 4%; */
+    width: 200px;
+    mix-blend-mode: lighten;
+    /* margin-right: -100px; */
+    /* margin-bottom: -50px; */
+    padding: 0px;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    transition: opacity 2.5s ease;
+  }
+
+  
+
+  .archive {
+    object-fit: contain;
+    display: inline-block;
+    opacity: .8;
+    /* width: 4%; */
+    width: 200px;
+    mix-blend-mode: lighten;
+    /* margin-right: -100px; */
+    /* margin-bottom: -50px; */
+    padding: 0px;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 0;
+    margin-right: 0;
+    object-position: 0 0;
+  }
+
+
+
+  p.staticText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: white;
+    letter-spacing: 2px;
+    padding: 20px;
+  }
+
+  p.staticText.about {
+    font-size: 1.5em;
+
+  }
+
+  #one {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+    position: relative;
+    z-index: -100;
+  }
+  
+  #two {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+  
+  }
+  
+  #three {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+  }
+  
+  #four {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+  }
+  
+  #five {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+  }
+  
+  #six {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+  }
+  
+  #seven {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+  }
+  
+  #eight {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+  }
+  
+  #nine {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
+    width: 80%;
+  }
+  
+  #ten {
+    display: none;
+    animation: turnOn 2s ease both alternate 1;
+    transition: 2s opacity ease;
+    padding: 0 10px;
+    font-size: 1.25em;
     width: 80%;
   }
   .archiveView{
