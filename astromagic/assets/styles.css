@@ -218,7 +218,7 @@ p.staticText {
 #one {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -229,7 +229,7 @@ p.staticText {
 #two {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -239,7 +239,7 @@ p.staticText {
 #three {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -248,7 +248,7 @@ p.staticText {
 #four {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -257,7 +257,7 @@ p.staticText {
 #five {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -266,7 +266,7 @@ p.staticText {
 #six {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -275,7 +275,7 @@ p.staticText {
 #seven {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -284,7 +284,7 @@ p.staticText {
 #eight {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -293,7 +293,7 @@ p.staticText {
 #nine {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -302,7 +302,7 @@ p.staticText {
 #ten {
   display: none;
   animation: turnOn 2s ease both alternate 1;
-  transition: 2s all ease, display 4s ease;
+  transition: 2s opacity ease;
   padding: 0 40px;
   font-size: 2.25em;
   width: 70%;
@@ -346,7 +346,7 @@ p.staticText.about a:hover {
   img {
     object-fit: contain;
     display: inline-block;
-    opacity: .8;
+    opacity: 0;
     /* width: 4%; */
     width: 200px;
     mix-blend-mode: lighten;
@@ -359,8 +359,10 @@ p.staticText.about a:hover {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    transition: all 2.5s ease;
+    transition: opacity 2.5s ease;
   }
+
+  
 
   .archive {
     object-fit: contain;
@@ -401,7 +403,7 @@ p.staticText.about a:hover {
   #one {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -412,7 +414,7 @@ p.staticText.about a:hover {
   #two {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -422,7 +424,7 @@ p.staticText.about a:hover {
   #three {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -431,7 +433,7 @@ p.staticText.about a:hover {
   #four {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -440,7 +442,7 @@ p.staticText.about a:hover {
   #five {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -449,7 +451,7 @@ p.staticText.about a:hover {
   #six {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -458,7 +460,7 @@ p.staticText.about a:hover {
   #seven {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -467,7 +469,7 @@ p.staticText.about a:hover {
   #eight {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -476,7 +478,7 @@ p.staticText.about a:hover {
   #nine {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
@@ -485,7 +487,7 @@ p.staticText.about a:hover {
   #ten {
     display: none;
     animation: turnOn 2s ease both alternate 1;
-    transition: 2s all ease, display 4s ease;
+    transition: 2s opacity ease;
     padding: 0 10px;
     font-size: 1.5em;
     width: 80%;
