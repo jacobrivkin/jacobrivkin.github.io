@@ -1,0 +1,472 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'work';
+    src: url("assets/type/Work_Sans/WorkSans-VariableFont_wght.ttf") format('truetype'),
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    font-family: 'work', Fallback, sans-serif;
+    padding: 20px;
+    /*    height: 100vh;*/
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 2.5em;
+    color: black;
+}
+
+.current-page {
+    color: tomato;
+}
+
+/*CANVAS*/
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/*NAVIGATION*/
+
+ul.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    background: white;
+    padding: 10px 0;
+}
+
+#nobg {
+    background: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav li {
+    margin-right: 30px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    border-bottom: black solid 1px;
+}
+
+.nav .current-page a {
+    color: tomato;
+}
+
+.top {
+    position: fixed;
+    font-size: 1.75em;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    border: solid white 1px;
+    opacity: .5;
+}
+
+.top a {
+    color: black;
+}
+
+.top:hover {
+    opacity: 1;
+
+}
+
+
+/*Landing Page*/
+
+.main-description {
+    color: black;
+    font-size: 2em;
+    margin-bottom: 30px;
+    line-height: 1.4em;
+}
+
+
+/*BIO*/
+
+.bio-description {
+    color: black;
+    font-size: 1.5em;
+    margin: 20px 0px;
+    line-height: 1.3em;
+
+}
+
+
+/*CV*/
+
+.cv p {
+    color: black;
+    font-size: 1.25em;
+    margin: 5px 0px;
+}
+
+.cv h2 {
+    color: black;
+    padding: 10px 0;
+}
+
+.cv .current-class {
+    color: tomato;
+}
+
+
+/*Statement*/
+
+.statement p {
+    color: black;
+    font-size: 1.5em;
+    margin: 19px 0px;
+    line-height: 1.3em;
+
+}
+
+.statement h2 {
+    color: black;
+    padding: 0px 0;
+}
+
+
+/*Teaching*/
+
+.teaching p {
+    color: black;
+    font-size: 1em;
+    margin: 5px 0px;
+}
+
+.teaching h2 {
+    color: tomato;
+    font-size: 1.5em;
+    padding: 5px 0;
+}
+
+.teaching h3 {
+    color: black;
+    font-size: 1.25em;
+    padding: 5px 0;
+}
+
+.teaching h4 {
+    color: black;
+    font-size: 1em;
+    margin-top: 20px;
+    padding: 0px 0;
+}
+
+.current-class {
+    border: tomato 4px double;
+    padding: 10px
+}
+
+.completed-class {
+    margin-top: 20px
+}
+
+#complete-toggle {
+    color: tomato;
+    cursor: grab;
+}
+
+#complete-toggle:hover {
+    color: yellow;
+}
+
+#completed {
+    display: none;
+}
+
+/*LINKS*/
+
+a {
+    text-decoration: none;
+    color: black;
+    /*    transition: color .5s ease;*/
+    cursor: grab;
+    transition: ease .2s color;
+}
+
+p a {
+    text-decoration: none;
+    color: royalblue;
+    transition: color .5s ease;
+    cursor: grab;
+}
+
+a:hover {
+    color: deeppink;
+
+}
+
+/*PROJECT PAGE*/
+
+.project-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.project-link {
+    /* background-color: navy; */
+    /* width: 300px; */
+    /* height: 300px; */
+    border: black 2px solid;
+    margin: 0 10px 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-link a {
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color .25s ease;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.project-link a p {
+    padding: 15px;
+}
+
+.project-link a:hover {
+    color: hotpink;
+}
+
+/* Individual Project Pages */
+
+.project-page-text {
+    color: black;
+    font-size: 1.5em;
+    margin: 20px 0px;
+    line-height: 1.3em;
+    margin-bottom: 30px;
+    width: 85%
+}
+
+
+.project-page-content h2 {
+    font-size: 1.75em;
+    margin: 30px 0px 10px 0px;
+}
+
+.project-page-content ul {
+    margin-bottom: 30px;
+}
+
+.project-page-content li {
+    color: black;
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+
+h3 {
+    font-size: 1.25em;
+    color: grey;
+    margin: 5px 0px
+}
+
+.project-image {
+    width: 75%;
+    display: block;
+    margin: 10px 0;
+}
+
+.caption{
+    color:slategray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:.85em;
+    margin:-5px 0px 20px 0px;
+}
+
+/*IMAGES*/
+
+
+/*RESIZE RESIZE RESIZE RESIZE RESIZE RESIZE RESIZE RESIZE RESIZE RESIZE RESIZE RESIZE */
+@media only screen and (min-width:600px) and (max-width: 1000px) {
+
+    /*    NAV*/
+    ul.nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .nav li {
+        margin-right: 15px;
+        font-size: 1.75em;
+        text-transform: uppercase;
+        border-bottom: black solid 1px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    /*    Main*/
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin: 0;
+        padding: 0px;
+    }
+
+    /*    NAV*/
+    ul.nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .nav li {
+        /*    To have them go next to each other*/
+        /*    to give space around them*/
+        margin-right: 10px;
+        margin-bottom: 5px;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        border-bottom: white solid 1px;
+    }
+
+    .top {
+        position: fixed;
+        font-size: 1.5em;
+        right: 20px;
+        bottom: 20px;
+        padding: 5px 10px;
+        border-radius: 100%;
+        border: solid white 1px;
+        opacity: .5;
+    }
+
+    /*    PAGES*/
+    .main-description {
+        display: none;
+    }
+
+    .bio-description {
+        color: white;
+        font-size: 1.35em;
+        margin: 20px 0px;
+    }
+
+    .cv p {
+        color: white;
+        font-size: 1em;
+        margin: 5px 0px;
+    }
+
+
+    /*PROJECT PAGE*/
+
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .project-link {
+        /* background-color: navy; */
+        /* width: 300px; */
+        /* height: 200px; */
+        border: black 2px solid;
+        margin: 0 10px 10px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-link p {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    /* Individual Project Pages */
+
+    .project-page-text {
+        color: black;
+        font-size: 1.15em;
+        margin: 20px 0px;
+        line-height: 1em;
+    }
+
+    .project-page-content h2 {
+        font-size: 1.5em;
+        margin: 30px 0px 10px 0px;
+    }
+
+
+
+    .project-page-content ul {
+        margin-bottom: 30px;
+
+    }
+
+    .project-page-content iframe {
+        width: 98%;
+        margin: 0px;
+        height: 275px;
+    }
+
+    .project-page-content li {
+        color: black;
+        font-size: 1.25em;
+        line-height: 1.3em;
+    }
+
+    .project-image {
+        width: 95%;
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/*ANIMATIONS*/
