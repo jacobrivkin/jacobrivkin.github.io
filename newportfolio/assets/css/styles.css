@@ -444,13 +444,13 @@ h3 {
     }
 
     .bio-description {
-        color: white;
+        color: rgb(0, 0, 0);
         font-size: 1.35em;
         margin: 20px 0px;
     }
 
     .cv p {
-        color: white;
+        color: rgb(0, 0, 0);
         font-size: 1em;
         margin: 5px 0px;
     }
