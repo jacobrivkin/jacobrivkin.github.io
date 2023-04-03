@@ -247,6 +247,12 @@ a:hover {
     border:3px rgb(0, 4, 255) dashed;
 }
 
+.project-link.sculpture{
+    border:3px rgb(0, 238, 255) dashed;
+}
+
+/* ================= */
+
 .project-list {
     display: flex;
     flex-direction: row;
@@ -353,6 +359,11 @@ h3 {
     margin: 10px 0;
 }
 
+.lighthouse{
+    width: 65%;
+    display: block;
+    margin: 10px 0;
+}
 .caption{
     color:slategray;
     font-family: Arial, Helvetica, sans-serif;
