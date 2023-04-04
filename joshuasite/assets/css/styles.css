@@ -538,6 +538,8 @@ h3 {
     /*    PAGES*/
     .main-description {
         /* display: none; */
+        font-size: 1em;
+        width:95%;
     }
 
     .bio-description {
