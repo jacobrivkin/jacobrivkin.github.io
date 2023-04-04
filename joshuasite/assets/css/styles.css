@@ -22,7 +22,12 @@ body {
     background-color: white;
     font-family: 'work', Fallback, sans-serif;
     padding: 20px;
-    /*    height: 100vh;*/
+    
+}
+main{
+    /* background-color: red; */
+    height:100vh;
+    /* position: relative; */
 }
 
 h1 {
@@ -51,6 +56,9 @@ footer{
     position:relative;
     bottom:0px;
     margin:5px 0px;
+}
+#extra{
+    position: absolute;
 }
 
 /*NAVIGATION*/
@@ -200,89 +208,6 @@ margin-left:100px
     font-size: 1.5em;
     margin: 20px 0px;
     line-height: 1.3em;
-}
-
-/*CV*/
-
-.cv p {
-    color: black;
-    font-size: 1.25em;
-    margin: 5px 0px;
-}
-
-.cv h2 {
-    color: black;
-    padding: 10px 0;
-}
-
-.cv .current-class {
-    color: rgb(0, 132, 255);
-}
-
-
-/*Statement*/
-
-.statement p {
-    color: black;
-    font-size: 1.5em;
-    margin: 19px 0px;
-    line-height: 1.3em;
-
-}
-
-.statement h2 {
-    color: black;
-    padding: 0px 0;
-}
-
-
-/*Teaching*/
-
-.teaching p {
-    color: black;
-    font-size: 1em;
-    margin: 5px 0px;
-}
-
-.teaching h2 {
-    color: tomato;
-    font-size: 1.5em;
-    padding: 5px 0;
-}
-
-.teaching h3 {
-    color: black;
-    font-size: 1.25em;
-    padding: 5px 0;
-}
-
-.teaching h4 {
-    color: black;
-    font-size: 1em;
-    margin-top: 20px;
-    padding: 0px 0;
-}
-
-.current-class {
-    border: tomato 4px double;
-    padding: 10px
-}
-
-.completed-class {
-    margin-top: 20px
-}
-
-#complete-toggle {
-    color: tomato;
-    cursor: grab;
-}
-
-#complete-toggle:hover {
-    color: yellow;
-}
-
-#completed {
-    display: none;
 }
 
 /*LINKS*/
@@ -617,7 +542,7 @@ h3 {
     }
 
     .project-image {
-        width: 95%;
+        width: 90%;
         display: block;
         margin: 10px 0;
     }
@@ -625,6 +550,17 @@ h3 {
     .biopool-image {
         width: 95%;
     }
+/* Suitor */
+    .poem p{
+        font-size: 1em;
+        margin-left:15px
+        }
+        /* Twombly */
+#twomblylinks li{
+    margin-left:0px;
+    font-size:1.25em;
+}
+
 }
 
 /*ANIMATIONS*/
