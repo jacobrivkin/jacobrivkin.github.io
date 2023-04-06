@@ -525,7 +525,7 @@ h3 {
         font-size: 1.35em;
     }
 
-    main{
+    main {
         display: flex;
         flex-direction: column-reverse;
     }
@@ -569,6 +569,15 @@ h3 {
         padding: 15px;
         text-align: center;
         text-transform: uppercase;
+        text-align: center;
+    }
+
+    .project-link .tooltip {
+        display: none;
+    }
+
+    .project-link a:hover .tooltip {
+    display: none;
     }
 
     /* Individual Project Pages */
@@ -614,6 +623,8 @@ h3 {
         width: 95%;
     }
 }
+
+
 
 /*ANIMATIONS*/
 @keyframes arrowmover {
