@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    cursor: default;
 }
 
 *,
@@ -32,7 +33,7 @@ h1 {
 }
 
 .jacob {
-    color: rgb(252, 78, 47);
+    color: rgb(0, 0, 0);
 
 }
 
@@ -62,6 +63,7 @@ ul.nav {
     top: 0px;
     background: white;
     padding: 10px 0;
+    z-index: 1;
 }
 
 #nobg {
@@ -232,7 +234,7 @@ p a {
 }
 
 a:hover {
-    color: deeppink;
+    color: rgb(20, 102, 255);
 
 }
 
@@ -272,17 +274,26 @@ a:hover {
     border: none;
     font-weight: bold;
     animation-name: background-animation-mover;
-    animation-duration: 8s;
+    animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-play-state: running;
+    animation-play-state: play;
     transition: animation-play-state 2s ease;
+
+
+    
 }
 
 #projects-index .project-link a {
-    background-color: rgba(255, 255, 255, 0.75)
+    background-color: rgba(255, 255, 255, 0.5); 
+    transition: background-color 1s ease;
 }
+
+#projects-index .project-link a:hover {
+    background-color: rgba(255, 255, 255, .9) 
+}
+
 
 #projects-index .project-link:hover {
     animation-play-state: paused;
@@ -339,7 +350,7 @@ a:hover {
 
 
 .project-link a:hover {
-    color: hotpink;
+    color: rgb(23, 163, 245);
 }
 
 .project-link a:hover .tooltip {
@@ -598,6 +609,10 @@ h3 {
         text-align: center;
         text-transform: uppercase;
         text-align: center;
+    }
+
+    #projects-index .project-link a {
+        background-color: rgba(255, 255, 255, 0.7);
     }
 
     .project-link .tooltip {
