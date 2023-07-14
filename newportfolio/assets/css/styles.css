@@ -80,7 +80,11 @@ ul {
     text-transform: uppercase;
     border-bottom: black solid 1px;
 }
-
+ #name{
+color:grey;
+font-weight: bold;
+border:none;
+}
 .nav .current-page a {
     color: tomato;
 }
@@ -279,10 +283,7 @@ a:hover {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-play-state: play;
-    transition: animation-play-state 2s ease;
-
-
-    
+    transition: animation-play-state 2s ease;    
 }
 
 #projects-index .project-link a {
