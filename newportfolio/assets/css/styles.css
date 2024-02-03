@@ -80,11 +80,13 @@ ul {
     text-transform: uppercase;
     border-bottom: black solid 1px;
 }
- #name{
-color:grey;
-font-weight: bold;
-border:none;
+
+#name {
+    color: grey;
+    font-weight: bold;
+    border: none;
 }
+
 .nav .current-page a {
     color: tomato;
 }
@@ -277,22 +279,22 @@ a:hover {
     background-size: cover;
     border: none;
     font-weight: bold;
-    animation-name: background-animation-mover;
+    /* animation-name: background-animation-mover;
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-play-state: play;
-    transition: animation-play-state 2s ease;    
+    transition: animation-play-state 2s ease;     */
 }
 
 #projects-index .project-link a {
-    background-color: rgba(255, 255, 255, 0.5); 
+    background-color: rgba(255, 255, 255, 0.5);
     transition: background-color 1s ease;
 }
 
 #projects-index .project-link a:hover {
-    background-color: rgba(255, 255, 255, .9) 
+    background-color: rgba(255, 255, 255, .9)
 }
 
 
@@ -379,7 +381,7 @@ a:hover {
 }
 
 #POD {
-    background-image: url(../imgs/distillations/asteroid.png);
+    background-image: url(../imgs/distillations/FizzyWaterFinal.gif);
 }
 
 #TAX {
@@ -406,6 +408,17 @@ a:hover {
     background-image: url(../imgs/biopool/bp1.jpg);
 }
 
+#FLATS {
+    background-image: url(../imgs/);
+}
+
+#ANNEX {
+    background-image: url(../imgs/);
+}
+
+#TTB {
+    background-image: url(../imgs/tentimesbetter/George_Mom_Rivkin.jpg);
+}
 
 /* TEMPLATE */
 /* # {
@@ -455,6 +468,16 @@ h3 {
     display: block;
     margin: 10px 0;
 }
+
+/* ttb */
+.project-image.ttb {
+    width: 30%;
+}
+
+.project-image.gif {
+    width: 50%;
+}
+
 
 .lighthouse {
     width: 65%;
@@ -661,6 +684,14 @@ h3 {
         width: 95%;
         display: block;
         margin: 10px 0;
+    }
+
+    .project-image.ttb {
+        width: 90%;
+    }
+
+    .project-image.gif {
+        width: 90%;
     }
 
     .biopool-image {
